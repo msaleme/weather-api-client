@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:near-misses-api="http://www.mulesoft.org/schema/mule/near-misses-api" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/near-misses-api http://www.mulesoft.org/schema/mule/near-misses-api/current/mule-near-misses-api.xsd">
+	<near-misses-api:config name="Near_Misses_API_Config" doc:name="Near Misses API Config" doc:id="181a372c-f7f1-43d5-9027-7077969b5f08" property_host="localhost" property_port="8081" property_protocol="HTTP" property_basePath="/api" />
+	<flow name="weather-api-clientFlow" doc:id="9fa54fae-09a6-4259-ae54-59123e893c2a" >
+		<near-misses-api:create-near-mis doc:name="Create near mis" doc:id="dcea304b-e671-49bc-bbf4-d69a0cf5521b" config-ref="Near_Misses_API_Config"/>
+	</flow>
+</mule>
